@@ -1,9 +1,9 @@
 export const goToLogin = (history) => {
-    history.push("/login")
+    history.push("/user/login")
 }
 
-export const goToSingup = (history) => {
-    history.push("/singup")
+export const goToSignup = (history) => {
+    history.push("/user/signup")
 }
 
 export const goToFeed = (history) => {

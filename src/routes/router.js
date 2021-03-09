@@ -13,11 +13,11 @@ const Router = () => {
             <Header/>
             <Switch>
                 
-                <Route exact path="/signup">
+                <Route exact path="/user/signup">
                     <SingupPage/>
                 </Route>
 
-                <Route exact path="/login">
+                <Route exact path="/user/login">
                     <LoginPage/>
                 </Route>
 
