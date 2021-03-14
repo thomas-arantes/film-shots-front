@@ -14,6 +14,6 @@ export const goToAddImage = (history) => {
     history.push("/new-image")
 }
 
-export const goToDetail = (history) => {
-    history.push("/detail/:id")
+export const goToDetail = (history, id) => {
+    history.push(`/detail/${id}`)
 }
