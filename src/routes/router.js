@@ -1,24 +1,21 @@
 import React from "react"
-import { BrowserRouter, Switch, Route } from "react-router-dom"
-import Header from "../components/Header/Header"
+import { Switch, Route } from "react-router-dom"
 import AddImagePage from "../pages/AddImagePage/AddImagePage"
 import FeedPage from "../pages/FeedPage/FeedPage"
 import ImageDetailPage from "../pages/ImageDetailPage/ImageDetailPage"
 import LoginPage from "../pages/LoginPage/LoginPage"
 import SingupPage from "../pages/SingupPage/SignupPage"
 
-const Router = () => {
+const Router = ({setRightButtonText}) => {
     return(
-        <BrowserRouter>
-            <Header/>
             <Switch>
                 
-                <Route exact path="/signup">
-                    <SingupPage/>
+                <Route exact path="/user/signup">
+                    <SingupPage setRightButtonText = {setRightButtonText}/>
                 </Route>
 
-                <Route exact path="/login">
-                    <LoginPage/>
+                <Route exact path="/user/login">
+                    <LoginPage  setRightButtonText = {setRightButtonText}/>
                 </Route>
 
                 <Route exact path="/">
@@ -40,7 +37,6 @@ const Router = () => {
                 </Route>
 
             </Switch>
-        </BrowserRouter>
     )
 }
 
