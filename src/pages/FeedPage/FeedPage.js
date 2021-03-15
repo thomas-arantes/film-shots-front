@@ -4,7 +4,7 @@ import ImageCard from "../../components/ImageCards/ImageCard"
 import { BASE_URL } from "../../constants/url"
 import useProtectedPage from "../../hooks/useProtectedPage"
 import useRequestData from "../../hooks/useRequestData"
-import { CardListContainer } from "./styled"
+import { CardListContainer, CardContainer, CardImage } from "./styled"
 import { Button } from "@material-ui/core"
 import { goToAddImage, goToDetail } from "../../routes/coordinator"
 
@@ -20,12 +20,13 @@ const FeedPage = () => {
 
     const imageCards = images.map((image) => {
         return (
-                <ImageCard
+            <CardContainer>
+                <CardImage
                     key = {image.id} 
-                    subtitle = {image.subtitle}
-                    image = {image.file}
+                    src = {image.file}
                     onClick = {() => OnClickCard(image.id)}
                 />
+            </CardContainer>
         )
     })
     return (
